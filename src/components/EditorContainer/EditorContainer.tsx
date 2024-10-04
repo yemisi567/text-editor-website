@@ -78,7 +78,7 @@ const EditorContainer: React.FC = () => {
         <div className="p-4 mb-8">
           <input
             placeholder="Add Post Title"
-            className="text-2xl font-bold appearance-none border-none focus:outline-none placeholder:font-bold placeholder:text-2xl placeholder:text-[#343E37] bg-transparent"
+            className="text-2xl font-bold appearance-none border-none focus:outline-none placeholder:font-bold placeholder:text-2xl placeholder:text-primary bg-transparent"
           />
           <div className="">
             <Editor blocks={blocks} setBlocks={setBlocks} linkMeta={linkMeta} />

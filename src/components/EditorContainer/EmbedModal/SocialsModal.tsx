@@ -63,33 +63,33 @@ const SocialModal: React.FC<ModalProps> = ({ isOpen, onClose, onUpload }) => {
             <CancelIcon />
           </button>
         </div>
-        <p className="text-[#333333] font-normal text-[10px] mb-2">
+        <p className="text-misc-blue font-normal text-[10px] mb-2">
           SOCIAL MEDIA PLATFORM
         </p>
         <Select options={options} onSelect={handleSelect} />
-        <p className="text-[#333333] font-normal text-[10px] mt-4">URL</p>
+        <p className="text-misc-blue font-normal text-[10px] mt-4">URL</p>
         <input
           id="social-url"
           type="url"
           className={`w-full p-2 h-[34px] border ${
             urlError ? "border-red-500" : "border-[#E7F1E9]"
-          } rounded mt-2 bg-[#FAFAFA] text-xs font-normal hover:border-[#9DC7A9] focus:border-[#9DC7A9] focus:outline-none`}
+          } rounded mt-2 bg-light-bg text-xs font-normal hover:border-light-green focus:border-light-green focus:outline-none`}
           placeholder={`Enter ${selectedPlatform || "social media"} URL`}
           value={socialURL}
           onChange={handleURLChange}
         />
         {urlError && <p className="text-red-500 text-xs mt-1">{urlError}</p>}
-        <p className="text-[#333333] font-normal text-[10px] mt-4">CODE</p>
+        <p className="text-misc-blue font-normal text-[10px] mt-4">CODE</p>
         <input
           id="video-url"
           type="url"
-          className="w-full p-2 h-[34px] border border-[#E7F1E9] rounded mt-2 bg-[#FAFAFA] text-xs font-normal hover:border-[#9DC7A9] focus:border-[#9DC7A9] focus:outline-none"
+          className="w-full p-2 h-[34px] border border-[#E7F1E9] rounded mt-2 bg-light-bg text-xs font-normal hover:border-light-green focus:border-light-green focus:outline-none"
           placeholder="https://www.youtube.com/watch?v=..."
           value={code}
           onChange={(e) => setCode(e.target.value)}
         />
         <div className="flex items-center justify-between mt-4">
-          <span className="text-[#343E37] text-xs font-normal">
+          <span className="text-primary text-xs font-normal">
             Disable caption
           </span>
           <div className="pt-2">
@@ -112,7 +112,7 @@ const SocialModal: React.FC<ModalProps> = ({ isOpen, onClose, onUpload }) => {
             Embed
           </button>
           <button
-            className="ml-2 bg-transparent text-[#343E37] border border-[#CEE3D4] px-4 py-2 rounded text-sm font-semibold"
+            className="ml-2 bg-transparent text-primary border border-[#CEE3D4] px-4 py-2 rounded text-sm font-semibold"
             onClick={onClose}
           >
             Cancel

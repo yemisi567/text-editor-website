@@ -21,10 +21,10 @@ const Select: React.FC<SelectProps> = ({ options, onSelect }) => {
       <div
         onClick={toggleDropdown}
         className={`w-full bg-white border ${
-          isOpen ? "border-[#9DC7A9]" : "border-gray-300"
+          isOpen ? "border-light-green" : "border-gray-300"
         } rounded-md shadow-[0px 1px 4px #00000014] p-2 flex justify-between items-center cursor-pointer`}
       >
-        <span className="text-[#343E37] text-xs font-normal">
+        <span className="text-primary text-xs font-normal">
           {selectedOption ? selectedOption.label : options[0].label}
         </span>
         <MdArrowDropDown />
@@ -39,11 +39,11 @@ const Select: React.FC<SelectProps> = ({ options, onSelect }) => {
               onClick={() => handleOptionClick(option)}
               className={`cursor-pointer select-none relative py-2 pl-3 pr-9 ${
                 selectedOption?.value === option.value
-                  ? "bg-[#F7FCF8] text-[#343E37] text-xs font-normal"
-                  : "text-[#343E37] text-xs font-normal"
-              } hover:bg-[#F7FCF8]`}
+                  ? "bg-secondary-bg text-primary text-xs font-normal"
+                  : "text-primary text-xs font-normal"
+              } hover:bg-secondary-bg`}
             >
-              <span className="block truncate text-[#343E37] text-xs font-normal">
+              <span className="block truncate text-primary text-xs font-normal">
                 {option.label}
               </span>
             </div>

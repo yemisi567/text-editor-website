@@ -30,22 +30,22 @@ const EnterLinkModal: React.FC<ModalProps> = ({
             <CancelIcon />
           </button>
         </div>
-        <p className="text-[#333333] font-normal text-[10px] mt-4">TEXT</p>
+        <p className="text-misc-blue font-normal text-[10px] mt-4">TEXT</p>
         <input
           id="TEXT"
           type="url"
           className={`w-full p-2 h-[34px] border border-[#E7F1E9]
-          rounded mt-2 bg-[#FAFAFA] text-xs font-normal hover:border-[#9DC7A9] focus:border-[#9DC7A9] focus:outline-none`}
+          rounded mt-2 bg-light-bg text-xs font-normal hover:border-light-green focus:border-light-green focus:outline-none`}
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
 
-        <p className="text-[#333333] font-normal text-[10px] mt-4">LINK</p>
+        <p className="text-misc-blue font-normal text-[10px] mt-4">LINK</p>
         <input
           id="link-url"
           type="url"
           className={`w-full p-2 h-[34px] border border-[#E7F1E9]
-          rounded mt-2 bg-[#FAFAFA] text-xs font-normal hover:border-[#9DC7A9] focus:border-[#9DC7A9] focus:outline-none`}
+          rounded mt-2 bg-light-bg text-xs font-normal hover:border-light-green focus:border-light-green focus:outline-none`}
           value={link}
           onChange={(e) => setLink(e.target.value)}
         />
@@ -58,7 +58,7 @@ const EnterLinkModal: React.FC<ModalProps> = ({
             Add Link
           </button>
           <button
-            className="ml-2 bg-transparent text-[#343E37] border border-[#CEE3D4] px-4 py-2 rounded text-sm font-semibold"
+            className="ml-2 bg-transparent text-primary border border-[#CEE3D4] px-4 py-2 rounded text-sm font-semibold"
             onClick={onClose}
           >
             Cancel

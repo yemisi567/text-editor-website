@@ -36,8 +36,8 @@ const PictureModal: React.FC<ModalProps> = ({ isOpen, onClose, onUpload }) => {
             <CancelIcon />
           </button>
         </div>
-        <p className="font-semibold text-sm text-[#343E37]">Upload Image</p>
-        <p className="text-[#333333] font-normal text-[10px] mt-[10px]">
+        <p className="font-semibold text-sm text-primary">Upload Image</p>
+        <p className="text-misc-blue font-normal text-[10px] mt-[10px]">
           FILE UPLOAD
         </p>
         <div className="border-dashed border border-[#0A7227] p-6 rounded-md h-[141px] mt-[10px] flex items-center justify-center">
@@ -52,7 +52,7 @@ const PictureModal: React.FC<ModalProps> = ({ isOpen, onClose, onUpload }) => {
               <>
                 <label
                   htmlFor="file-upload"
-                  className="bg-transparent text-[#343E37] border border-[#CEE3D4] px-4 py-2 rounded text-sm font-semibold cursor-pointer"
+                  className="bg-transparent text-primary border border-[#CEE3D4] px-4 py-2 rounded text-sm font-semibold cursor-pointer"
                 >
                   Import Image from Device
                 </label>
@@ -80,7 +80,7 @@ const PictureModal: React.FC<ModalProps> = ({ isOpen, onClose, onUpload }) => {
             Embed
           </button>
           <button
-            className="ml-2 bg-transparent text-[#343E37] border border-[#CEE3D4] px-4 py-2 rounded text-sm font-semibold"
+            className="ml-2 bg-transparent text-primary border border-[#CEE3D4] px-4 py-2 rounded text-sm font-semibold"
             onClick={onClose}
           >
             Cancel
