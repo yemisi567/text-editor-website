@@ -19,6 +19,7 @@ import { EditorProps } from "../../types";
 
 const Editor: React.FC<EditorProps> = ({ blocks, setBlocks, linkMeta }) => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [hasTyped, setHasTyped] = useState(false);
   const editorRef = useRef<HTMLDivElement | null>(null);
   const [showParagraphDropdown, setShowParagraphDropdown] = useState(false);
   const [selectedParagraph, setSelectedParagraph] =
@@ -39,6 +40,10 @@ const Editor: React.FC<EditorProps> = ({ blocks, setBlocks, linkMeta }) => {
     const updatedBlocks = [...blocks];
     updatedBlocks[blockIndex].content = updatedText;
     setBlocks(updatedBlocks);
+
+    if (!hasTyped && updatedText.trim() !== "") {
+      setHasTyped(true);
+    }
   };
 
   // function to handle format
@@ -237,13 +242,15 @@ const Editor: React.FC<EditorProps> = ({ blocks, setBlocks, linkMeta }) => {
       })}
 
       {/* Plus Icon at the bottom of the text area */}
-      <div
-        className="absolute bg-[#E7F1E9] rounded-full w-[32px] h-[32px] flex items-center justify-center cursor-pointer"
-        style={{ left: "16px" }}
-        onClick={() => setShowDropdown(!showDropdown)}
-      >
-        <button className="text-[18px]">+</button>
-      </div>
+      {hasTyped && (
+        <div
+          className="absolute bg-[#E7F1E9] rounded-full w-[32px] h-[32px] flex items-center justify-center cursor-pointer"
+          style={{ left: "16px" }}
+          onClick={() => setShowDropdown(!showDropdown)}
+        >
+          <button className="text-[18px]">+</button>
+        </div>
+      )}
 
       {/* Paragraph Dropdown */}
       {showParagraphDropdown && (
