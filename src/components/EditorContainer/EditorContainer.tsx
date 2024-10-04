@@ -21,7 +21,6 @@ const EditorContainer: React.FC = () => {
     handleToggleLinkModal,
   } = useModalContext();
 
-  const maxWords = 1000;
   const [wordCount, setWordCount] = useState(0);
 
   // Handle adding embedded items like images or videos
@@ -73,23 +72,8 @@ const EditorContainer: React.FC = () => {
   return (
     <div className="flex flex-col justify-center p-6 w-1/2 ">
       {/* Editor Section */}
-      <div className="border border-[#E7F1E9] rounded h-screen w-full relative overflow-scroll">
-        <div className="border-[#E7F1E9] border-b h-[48px] mb-[22px]" />
-        <div className="p-4 mb-8">
-          <input
-            placeholder="Add Post Title"
-            className="text-2xl font-bold appearance-none border-none focus:outline-none placeholder:font-bold placeholder:text-2xl placeholder:text-primary bg-transparent"
-          />
-          <div className="">
-            <Editor blocks={blocks} setBlocks={setBlocks} linkMeta={linkMeta} />
-          </div>
-        </div>
-        <div className="fixed flex bottom-0 left-0 right-0 px-4 py-2 bg-white border-t border-[#E7F1E9]">
-          <p className="ml-auto text-sm text-gray-500">
-            {`${wordCount}/${maxWords} words`}
-          </p>
-        </div>
-      </div>
+      <Editor blocks={blocks} setBlocks={setBlocks} linkMeta={linkMeta} />
+
       {/* Post Button Section */}
       <div className="flex">
         <button
