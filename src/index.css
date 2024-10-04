@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ul {
+    @apply list-inside list-disc ml-5;
+  }
+  
+  ol {
+    @apply list-inside list-decimal ml-5;
+  }
+  
+  blockquote {
+    @apply border-l-4 border-gray-400 pl-4 text-gray-500 italic ml-5;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(87, 106, 129, 0.6);
+        border-radius: 5px;
+    }
+}
